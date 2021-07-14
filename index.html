@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="popup">
+    <img src="assets/142.jpg" alt="wts" class="popup_img">
+  </div>
+
+  <div class="container">
+
+    <div class="box">
+      <h2 class="name">Ручка</h2>
+      <a href="#" class="buy">Купить</a>
+      <div class="circle"></div>
+      <img src="assets/pen.png" alt="running_shoes" class="product">
+    </div>
+
+  </div>
+  <script src="vanilla-tilt.min.js"></script>
+  <script>
+    VanillaTilt.init(document.querySelectorAll(".box"), {
+      max: 25,
+      speed: 400
+    });
+  </script>
+  <script>
+    document.querySelector('.popup_img').addEventListener('click', close);
+    document.querySelector('.buy').addEventListener('click', open);
+    function close() {
+      console.log('1')
+      document.querySelector('.popup').classList.add('close')
+    }
+    function open() {
+      console.log('1')
+      document.querySelector('.popup').classList.remove('close')
+    }
+  </script>
+</body>
+
+</html>
